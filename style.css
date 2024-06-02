@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --bg-clr: #ECF2F8;
+  --card-clr-1: #733FC8;
+  --card-clr-2: #48556A;
+  --card-clr-3-5: #FFFFFF;
+  --card-clr-4: #19202D;
+  --font-clr-1: var(--card-clr-3-5);
+  --font-clr-2: #CFCFCF;
+  --font-clr-3: var(--bg-clr);
+  --font-clr-4: var(--card-clr-2);
+  --border-clr: #A775F1;
+  --ff-main: "Barlow Semi Condensed";
+  --fs-heading: 1.25rem;
+  --fs-para: 0.8125rem;
+  --fs-para-status: 0.6875rem;
+  --heading-spacing-bottom: 1rem;
+  --heading-spacing-top: 1.125rem;
+  --para-spacing-bottom: 2rem;
+  --para-spacing-top: 1.625rem;
+}
+
+/* CSS Reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* General Styling */
+body {
+  background: var(--bg-clr);
+  font-family: var(--ff-main), sans-serif;
+  font-size: var(--fs-para);
+}
+
+.container {
+  width: 87%;
+  margin: 0 auto;
+  margin: 4.375rem auto 4.375rem auto;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.625rem;
+}
+
+.image {
+  width: 28px;
+  border-radius: 100px;
+}
+
+.comment-card-1 .image,
+.comment-card-4 .image {
+  border: 3px solid var(--border-clr);
+  width: 33px;
+}
+
+.information .name {
+  font-weight: 500;
+  font-size: var(--fs-para);
+  line-height: 1rem;
+}
+
+.information .status {
+  font-weight: 500;
+  font-size: var(--fs-para-status);
+  opacity: 0.5;
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cards>*>* {
+  width: 80.5%;
+  margin: 0 auto;
+  color: var(--font-clr-1);
+}
+
+.comment-card-1 {
+  background: var(--card-clr-1);
+  border-radius: 0.5rem;
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position-x: 89.5%;
+}
+
+.comment-card-1 p:not(.name, .status) {
+  width: 95%;
+}
+
+.comment-card-1 .desc {
+  color: var(--font-clr-2);
+}
+
+.comment-card-1 .topic-heading {
+  --heading-spacing-bottom: 2.5rem;
+}
+
+.topic-heading {
+  margin-top: var(--heading-spacing-top);
+  margin-bottom: var(--heading-spacing-bottom);
+  font-size: var(--fs-heading);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.comment-card-2 {
+  background: var(--card-clr-2);
+  border-radius: 0.5rem;
+}
+
+.comment-card-3 {
+  background: var(--card-clr-3-5);
+  border-radius: 0.5rem;
+}
+
+.comment-card-3>* {
+  color: var(--font-clr-4);
+}
+
+.comment-card-4 {
+  background: var(--card-clr-4);
+  border-radius: 0.5rem;
+}
+
+.comment-card-5 {
+  background: var(--card-clr-3-5);
+  border-radius: 0.5rem;
+}
+
+.comment-card-5>* {
+  color: var(--font-clr-4);
+}
+
+.desc {
+  padding-bottom: var(--para-spacing-bottom);
+  opacity: 0.7;
+  line-height: 1.125rem;
+  font-weight: 500;
+}
+
+/* change positioning on larger screen sizes of svg */

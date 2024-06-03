@@ -102,8 +102,13 @@ body {
 
 .container {
   width: 87%;
-  margin: 0 auto;
+  margin-inline: auto;
   margin: 4.375rem auto 4.375rem auto;
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .information {
@@ -136,14 +141,9 @@ body {
   opacity: 0.5;
 }
 
-.cards {
-  display: grid;
-  gap: 1.5rem;
-}
-
 .cards>*>* {
   width: 80.5%;
-  margin: 0 auto;
+  margin-inline: auto;
   color: var(--font-clr-1);
 }
 
@@ -156,7 +156,7 @@ body {
 }
 
 .comment-card-1 p:not(.name, .status) {
-  width: 95%;
+  width: 94%;
 }
 
 .comment-card-1 .desc {
@@ -165,14 +165,6 @@ body {
 
 .comment-card-1 .topic-heading {
   --heading-spacing-bottom: 2.5rem;
-}
-
-.topic-heading {
-  margin-top: var(--heading-spacing-top);
-  margin-bottom: var(--heading-spacing-bottom);
-  font-size: var(--fs-heading);
-  line-height: 1.2;
-  font-weight: 600;
 }
 
 .comment-card-2 {
@@ -201,6 +193,14 @@ body {
 
 .comment-card-5>* {
   color: var(--font-clr-4);
+}
+
+.topic-heading {
+  margin-top: var(--heading-spacing-top);
+  margin-bottom: var(--heading-spacing-bottom);
+  font-size: var(--fs-heading);
+  line-height: 1.2;
+  font-weight: 600;
 }
 
 .desc {

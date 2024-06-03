@@ -261,4 +261,9 @@ body {
     grid-column: 4/5;
   }
 
+  .comment-card-3,
+  .comment-card-4,
+  .comment-card-5 {
+    --heading-spacing-bottom: 1.5rem;
+  }
 }

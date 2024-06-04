@@ -193,6 +193,11 @@ body {
   color: var(--font-clr-4);
 }
 
+.comment-card-3,
+.comment-card-5 {
+  box-shadow: 0.5rem 0.5rem 1rem rgb(190, 190, 190);
+}
+
 .topic-heading {
   margin-top: var(--heading-spacing-top);
   margin-bottom: var(--heading-spacing-bottom);
